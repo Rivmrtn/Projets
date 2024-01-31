@@ -5,32 +5,38 @@
   <body>
     <a-scene>
       
-      <img id="mur1" src="./mur1.jpg">
-      <img id="mur2" src="./mur2.jpg">
-      <img id="mur3" src="./mur3.jpg">
-      <img id="mur8" src="./mur8.jpg">
-      <img id="chandeliers" src="./chandelierr.png">
-      <img id="sol" src="./sol1.jpg">
-      <img id="plaf" src="./plafond.jpg">
-      <img id="sky" src="./jardin.jpg">
-      <img id="fin" src="./fin.jpg">
-      <img id="tab1a" src="./tab1a.png">
-      <img id="tab2" src="./tab2.png">
-      <img id="tab3" src="./tab3.png">
-      <img id="tab4" src="./tab4.png">
-      <img id="tab5" src="./tab5.png">
-      <img id="tab6" src="./tab6.png">
-      <img id="tab7" src="./tab7.png">
-      <img id="tab8" src="./tab8.png">
+       <!-- IMAGES -->
+      <!-- murs -->
+      <img id="mur1" src="./img_lab_2/mur1.jpg">
+      <img id="mur2" src="./img_lab_2/mur2.jpg">
+      <img id="mur3" src="./img_lab_2/mur3.jpg">
+      <img id="mur8" src="./img_lab_2/mur8.jpg">
 
-      <a-entity camera="active: true" look-controls wasd-controls="acceleration:10" position="0 1.6 0"> </a-entity>
+      <!-- extra -->
 
-       
-       
+      <img id="chandeliers" src="./img_lab_2/chandelierr.png">
+      <img id="sol1" src="./img_lab_2/sol1.jpg">
+      <img id="plaf" src="./img_lab_2/plafond.jpg">
+      <img id="sky" src="./img_lab_2/jardin.jpg">
+      <img id="fin" src="./img_lab_2/fin.jpg">
+
+      <!-- tableaux -->
+
+      <img id="tab1" src="./img_lab_2/tab1a.png">
+      <img id="tab2" src="./img_lab_2/tab2.png">
+      <img id="tab3" src="./img_lab_2/tab3.png">
+      <img id="tab4" src="./img_lab_2/tab4.png">
+      <img id="tab5" src="./img_lab_2/tab5.png">
+      <img id="tab6" src="./img_lab_2/tab6.png">
+      <img id="tab7" src="./img_lab_2/tab7.png">
+      <img id="tab8" src="./img_lab_2/tab8.png">
         
-      <!-- MIXIN -->
+       <!-- MIXIN -->
+
+      <a-mixin id="sol" geometry="width:4; height:4; primitive: plane" material="src: #sol1" rotation="90 0 0 "></a-mixin>
+      <a-mixin id="double" material="side:double"  ></a-mixin>
       
-      <a-mixin id="mur1h" geometry="width: 0.001; height: 2; depth: 0.5"  rotation="0 0 0" material="src: #mur1"></a-mixin>
+      <a-mixin id="mur1h" geometry="width: 0.001; height: 2; depth: 0.5 primitive: plane"  rotation="0 0 0" material="src: #mur1"></a-mixin>
       <a-mixin id="mur1v" geometry="width: 0.001; height: 2; depth: 0.5"  rotation="0 90 0" material="src: #mur1"></a-mixin>
 
       <a-mixin id="mur2h" geometry="width: 0.001; height: 2; depth: 1"  rotation="0 0 0" material="src: #mur2"></a-mixin>
@@ -39,19 +45,19 @@
       <a-mixin id="mur3h" geometry="width: 0.001; height: 2; depth: 1.5"  rotation="0 0 0" material="src: #mur3"></a-mixin>
       <a-mixin id="mur3v" geometry="width: 0.001; height: 2; depth: 1.5"  rotation="0 90 0" material="src: #mur3"></a-mixin>
       
-      
+      <!-- camera -->
 
-
+      <a-entity camera="active: true" look-controls wasd-controls="acceleration:10" position="0 1.6 0"> </a-entity>
 
       <!-- sol et plafond -->
     
-      <a-plane position="0 0.5 0" rotation="-90 0 0" width="4" height="4" src="#sol" side="double"></a-plane>
+      <a-entity mixin="sol double" position="0 0.5 0"></a-entity>
       <a-plane position="0 2.5 0" rotation="-90 0 0" width="4" height="4" src="#plaf" side="back"></a-plane>
       <a-plane position="0 2.5 0" rotation="-90 0 0" width="4" height="4" color="black" side="front"></a-plane>
 
       <!-- tableaux -->
 
-      <a-plane position="0 1.5 -0.49" rotation="0 0 0" width="0.5" height="2" depth="0.05" src="#tab1a" side="double"  transparent=true></a-plane>
+      <a-plane position="0 1.5 -0.49" rotation="0 0 0" width="0.5" height="2" depth="0.05" src="#tab1" side="double"  transparent=true></a-plane>
       <a-plane position="-0.99 1.5 -0.5" rotation="0 90 0" width="0.5" height="2" depth="0.05" src="#tab2" side="double"  transparent=true></a-plane>
       <a-plane position="1 1.5 0.99" rotation="0 0 0" width="0.5" height="2" depth="0.05" src="#tab3" side="double"  transparent=true></a-plane>
       <a-plane position="0.75 1.5 -1.51" rotation="0 0 0" width="0.5" height="2" depth="0.05" src="#tab4" side="double"  transparent=true></a-plane>
@@ -63,32 +69,35 @@
     
       <!-- chandeliers -->
 
-      <a-plane position="0 1.75 0"  rotation="0 90 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=all ></a-plane>
-      <a-plane position="0 1.75 0"  rotation="0 0 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=true ></a-plane>
+      <a-plane position="0 1.9 0"  rotation="0 90 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=true ></a-plane>
+      <a-plane position="0 1.9 0"  rotation="0 0 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=true ></a-plane>
 
-      <a-plane position="1.75 1.75 1.75"  rotation="0 90 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=all ></a-plane>
-      <a-plane position="1.75 1.75 1.75"  rotation="0 0 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=true ></a-plane>
+      <a-plane position="1.75 1.9 1.75"  rotation="0 90 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=true ></a-plane>
+      <a-plane position="1.75 1.9 1.75"  rotation="0 0 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=true ></a-plane>
 
-      <a-plane position="-1.75 1.75 1.75"  rotation="0 90 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=all ></a-plane>
-      <a-plane position="-1.75 1.75 1.75"  rotation="0 0 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=true ></a-plane>
+      <a-plane position="-1.75 1.9 1.75"  rotation="0 90 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=true ></a-plane>
+      <a-plane position="-1.75 1.9 1.75"  rotation="0 0 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=true ></a-plane>
 
-      <a-plane position="-1.75 1.75 -1.75"  rotation="0 90 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=all ></a-plane>
-      <a-plane position="-1.75 1.75 -1.75"  rotation="0 0 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=true ></a-plane>
+      <a-plane position="-1.75 1.9 -1.75"  rotation="0 90 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=true ></a-plane>
+      <a-plane position="-1.75 1.9 -1.75"  rotation="0 0 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=true ></a-plane>
 
-      <a-plane position="1.75 1.75 -1.75"  rotation="0 90 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=all ></a-plane>
-      <a-plane position="1.75 1.75 -1.75"  rotation="0 0 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=true ></a-plane>
+      <a-plane position="1.75 1.9 -1.75"  rotation="0 90 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=true ></a-plane>
+      <a-plane position="1.75 1.9 -1.75"  rotation="0 0 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=true ></a-plane>
 
-      <a-plane position="0.75 1.75 -0.75"  rotation="0 90 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=all ></a-plane>
-      <a-plane position="0.75 1.75 -0.75"  rotation="0 0 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=true ></a-plane>
+      <a-plane position="0.75 1.9 -0.75"  rotation="0 90 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=true ></a-plane>
+      <a-plane position="0.75 1.9 -0.75"  rotation="0 0 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=true ></a-plane>
 
-      <a-plane position="0.25 1.75 1.75"  rotation="0 90 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=all ></a-plane>
-      <a-plane position="0.25 1.75 1.75"  rotation="0 0 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=true ></a-plane>
+      <a-plane position="0.25 1.9 1.75"  rotation="0 90 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=true ></a-plane>
+      <a-plane position="0.25 1.9 1.75"  rotation="0 0 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=true ></a-plane>
 
-      <a-plane position="-1.25 1.75 0.25"  rotation="0 90 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=all ></a-plane>
-      <a-plane position="-1.25 1.75 0.25"  rotation="0 0 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=true ></a-plane>
+      <a-plane position="-1.25 1.9 0.25"  rotation="0 90 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=true ></a-plane>
+      <a-plane position="-1.25 1.9 0.25"  rotation="0 0 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=true ></a-plane>
 
-      <a-plane position="-1.25 1.75 -0.75"  rotation="0 90 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=all ></a-plane>
-      <a-plane position="-1.25 1.75 -0.75"  rotation="0 0 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=true ></a-plane>
+      <a-plane position="-1.25 1.9 -0.75"  rotation="0 90 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=true ></a-plane>
+      <a-plane position="-1.25 1.9 -0.75"  rotation="0 0 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=true ></a-plane>
+
+      <a-plane position="-0.25 1.9 -1.25"  rotation="0 90 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=true ></a-plane>
+      <a-plane position="-0.25 1.9 -1.25"  rotation="0 0 0" width="0.5" height="0.5" src="#chandeliers"side="double" transparent=true ></a-plane>
 
       <!-- murs de 1 unité horizontaux -->
       <a-entity mixin="mur1h" position="-0.5 1.5 1.75"></a-entity>
@@ -154,10 +163,12 @@
       <a-plane position="0 1.5 -2" rotation="0 0 0" width="4" height="2" src="#mur8" side="front"></a-plane>
       <a-plane position="0 1.5 -2" rotation="0 0 0" width="4" height="2" color="black" side="back"></a-plane>
 
+      <!-- image de fin -->
+
       <a-plane position="0 1.5 4" rotation="0 180 0" width="4" height="4" src="#fin" side="front"></a-plane>
 
-      
-      
+      <!-- ciel -->
+
       <a-sky src="#sky"></a-sky>
     </a-scene>
   </body>
