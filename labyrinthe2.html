@@ -6,6 +6,12 @@
     <a-scene>
       
        <!-- IMAGES -->
+
+       <!-- statue -->
+
+       <a-asset-item id="obj" src="./12330_Statue_v1_L2.obj"></a-asset-item>
+       <a-asset-item id="mtl" src="./12330_Statue_v1_L2.mtl"></a-asset-item>
+
       <!-- murs -->
       <img id="mur1" src="./img_lab_2/mur1.jpg">
       <img id="mur2" src="./img_lab_2/mur2.jpg">
@@ -54,6 +60,10 @@
       <a-entity mixin="sol double" position="0 0.5 0"></a-entity>
       <a-plane position="0 2.5 0" rotation="-90 0 0" width="4" height="4" src="#plaf" side="back"></a-plane>
       <a-plane position="0 2.5 0" rotation="-90 0 0" width="4" height="4" color="black" side="front"></a-plane>
+
+       <!--statue-->
+      
+      <a-entity position="-0.3 0.5 0.2" scale="0.0025 0.0025 0.0025" obj-model="obj: #obj; mtl: #mtl" rotation="-90 90 0"></a-entity>
 
       <!-- tableaux -->
 
