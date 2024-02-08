@@ -1,0 +1,90 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+        <a-assets>
+
+
+          <img id="mur1" src="./kikou.jpg">
+          <img id="mur2" src="./kakou.jpg">
+            
+            <a-asset-item id="flèche" src="./whatmess3d/arrow.glb"></a-asset-item>
+            <a-asset-item id="cupidmtl" src="./whatmess3d/Cupid_v3_L2.123c9050abe4-234c-4f2e-91ae-5faa12053442/Cupid.mtl"></a-asset-item>
+            <a-asset-item id="cupidobj" src="./whatmess3d/Cupid_v3_L2.123c9050abe4-234c-4f2e-91ae-5faa12053442/Cupid.obj"></a-asset-item>
+            <a-asset-item id="statueobj" src="./whatmess3d/Statue_v1_L3.123cba36a8bf-c511-4678-98d4-db0007912819/12329_Statue_v1_l3.obj"></a-asset-item>
+            <a-asset-item id="statuemtl" src="./whatmess3d/Statue_v1_L3.123cba36a8bf-c511-4678-98d4-db0007912819/12329_Statue_v1_l3.mtl"></a-asset-item>
+            <a-asset-item id="camera1" src="./whatmess3d/camera.obj"></a-asset-item>
+            <a-asset-item id="roimtl" src="./whatmess3d/Stone_Chess_King_Side_A_v2_L1.123cb493df42-46f1-49ef-8c89-479187ab8a22/12939_Stone_Chess_King_Side_A_V2_l1.mtl"></a-asset-item>
+            <a-asset-item id="roiobj" src="./whatmess3d/Stone_Chess_King_Side_A_v2_L1.123cb493df42-46f1-49ef-8c89-479187ab8a22/12939_Stone_Chess_King_Side_A_V2_l1.obj"></a-asset-item>
+          </a-assets>
+        
+          <a-entity camera="active: true" look-controls wasd-controls="acceleration:20" position="0 1.6 0"> </a-entity>
+
+          <!-- flèches -->
+
+          <a-entity gltf-model="#flèche" position="-1 2 1" scale="0.20 0.20 0.20" rotation="0 45 -35"> </a-entity>
+          <a-entity gltf-model="#flèche" position="1 2 -1" scale="0.20 0.20 0.20" rotation="0 225 -35"> </a-entity>
+          <a-entity gltf-model="#flèche" position="-1 2 -1" scale="0.20 0.20 0.20" rotation="0 315 -35"> </a-entity>
+          <a-entity gltf-model="#flèche" position="1 2 1" scale="0.20 0.20 0.20" rotation="0 135 -35"> </a-entity>
+
+          <a-entity gltf-model="#flèche" position="0 1.5 1" scale="0.20 0.20 0.20" rotation="0 90 -35"> </a-entity>
+          <a-entity gltf-model="#flèche" position="1 1.5 0" scale="0.20 0.20 0.20" rotation="0 180 -35"> </a-entity>
+          <a-entity gltf-model="#flèche" position="-1 1.5 0" scale="0.20 0.20 0.20" rotation="0 0 -35"> </a-entity>
+          <a-entity gltf-model="#flèche" position="0 1.5 -1" scale="0.20 0.20 0.20" rotation="0 270 -35"> </a-entity>
+
+          <a-entity gltf-model="#flèche" position="-0.75 2 0.25" scale="0.20 0.20 0.20" rotation="0 30 -45"> </a-entity>
+          <a-entity gltf-model="#flèche" position="-0.25 2 0.75" scale="0.20 0.20 0.20" rotation="0 60 -45"> </a-entity>
+          <a-entity gltf-model="#flèche" position="-0.75 2 -0.25" scale="0.20 0.20 0.20" rotation="0 330 -45"> </a-entity>
+          <a-entity gltf-model="#flèche" position="-0.25 2 -0.75" scale="0.20 0.20 0.20" rotation="0 300 -35"> </a-entity>
+
+          <a-entity gltf-model="#flèche" position="0.75 2 0.25" scale="0.20 0.20 0.20" rotation="0 150 -45"> </a-entity>
+          <a-entity gltf-model="#flèche" position="0.25 2 0.75" scale="0.20 0.20 0.20" rotation="0 120 -45"> </a-entity>
+          <a-entity gltf-model="#flèche" position="0.75 2 -0.25" scale="0.20 0.20 0.20" rotation="0 210 -45"> </a-entity>
+          <a-entity gltf-model="#flèche" position="0.25 2 -0.75" scale="0.20 0.20 0.20" rotation="0 240 -35"> </a-entity>
+
+          <a-entity gltf-model="#flèche" position="-0.75 2.5 0.25" scale="0.20 0.20 0.20" rotation="0 30 -45"> </a-entity>
+          <a-entity gltf-model="#flèche" position="-0.25 2.5 0.75" scale="0.20 0.20 0.20" rotation="0 60 -45"> </a-entity>
+          <a-entity gltf-model="#flèche" position="-0.75 2.5 -0.25" scale="0.20 0.20 0.20" rotation="0 330 -45"> </a-entity>
+          <a-entity gltf-model="#flèche" position="-0.25 2.5 -0.75" scale="0.20 0.20 0.20" rotation="0 300 -35"> </a-entity>
+
+          <a-entity gltf-model="#flèche" position="0.75 2.5 0.25" scale="0.20 0.20 0.20" rotation="0 150 -45"> </a-entity>
+          <a-entity gltf-model="#flèche" position="0.25 2.5 0.75" scale="0.20 0.20 0.20" rotation="0 120 -45"> </a-entity>
+          <a-entity gltf-model="#flèche" position="0.75 2.5 -0.25" scale="0.20 0.20 0.20" rotation="0 210 -45"> </a-entity>
+          <a-entity gltf-model="#flèche" position="0.25 2.5 -0.75" scale="0.20 0.20 0.20" rotation="0 240 -35"> </a-entity>
+
+          <!-- roi -->
+          <a-entity position="0.5 0 1.7" scale="0.18 0.18 0.18" obj-model="obj: #roiobj; mtl: #roimtl" rotation="-90 180 0"></a-entity>
+
+          <!-- statue -->
+          <a-entity position="1.25 0 -1.5" scale="0.005 0.005 0.005" obj-model="obj: #statueobj; mtl: #statuemtl" rotation="-90 0 0"></a-entity>
+          <a-entity position="-1.25 0 -1.5" scale="0.005 0.005 0.005" obj-model="obj: #statueobj; mtl: #statuemtl" rotation="-90 0 0"></a-entity>
+
+          <!-- cupidon -->
+          <a-entity position="1.25 1.32 1.5" scale="0.015 0.015 0.015" obj-model="obj: #cupidobj; mtl: #cupidmtl" rotation="-79 240 0"></a-entity>
+          <a-entity position="-1.25 1.32 1.5" scale="0.015 0.015 0.015" obj-model="obj: #cupidobj; mtl: #cupidmtl" rotation="-79 150 0"></a-entity>
+
+
+          
+    
+    
+      <a-plane position="0 0 0" rotation="90 0 0" width="4" height="4" color="black" side="double"></a-plane>
+      <a-plane position="0 4 0" rotation="-90 0 0" width="4" height="4" color="black" side="double"></a-plane>
+
+
+      <a-plane position="-2 1 0" rotation="0 90 0" width="4" height="2" src="#mur2" side="double"></a-plane>
+      <a-plane position="2 1 0" rotation="0 90 0" width="4" height="2" src="#mur2" side="double"></a-plane>
+      <a-plane position="0 1 2" rotation="0 0 0" width="4" height="2" src="#mur1" side="double"></a-plane>
+      <a-plane position="0 1 -2" rotation="0 0 0" width="4" height="2" src="#mur2" side="double"></a-plane>
+
+      <a-plane position="-2 3 0" rotation="0 90 0" width="4" height="2" src="#mur2" side="double"></a-plane>
+      <a-plane position="2 3 0" rotation="0 90 0" width="4" height="2" src="#mur2" side="double"></a-plane>
+      <a-plane position="0 3 2" rotation="0 0 0" width="4" height="2" color="black" side="double"></a-plane>
+      <a-plane position="0 3 -2" rotation="0 0 0" width="4" height="2" src="#mur2" side="double"></a-plane>
+
+
+      <a-sky color="white"></a-sky>
+    </a-scene>
+  </body>
+</html>
