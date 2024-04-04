@@ -7,3 +7,5 @@
 * [labyrinthe 2](./labyrinthe2.html)
 
 * [WHAT A MESS OLALA](./what_a_mess.html)
+
+* [I Am Flying](./iamflying/iamflying_full_edit.html)
