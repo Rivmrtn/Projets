@@ -178,7 +178,7 @@
             <a-asset-item id="metro" src="./assets/95c5d6515ff04092987d698ab2c8442a.glb"></a-asset-item>
             <a-asset-item id="metro2obj" src="./assets/Subway_Car_v2_L2.123cb9dd5a3b-c41a-4e15-891d-94b47c8fa676/13918_Subway_Car_v1_L2.obj"></a-asset-item>
             <a-asset-item id="metro2mtl" src="./assets/Subway_Car_v2_L2.123cb9dd5a3b-c41a-4e15-891d-94b47c8fa676/13918_Subway_Car_v1_L2.mtl"></a-asset-item>
-            
+            <a-asset-item id="cloudr" src="./assets/cloud_ring2.glb"></a-asset-item>
             
             <img id="sky3" src="./assets/table_mountain_2_puresky_4k.jpg">
         </a-assets>
@@ -189,11 +189,13 @@
         <a-entity position="-10 8 10" rotation="0 34 160"gltf-model="#metro" animation="property: position ;from: -10 8 10; to: -8 8 10; loop: true; dur : 10000 easing : linear"></a-entity>
         <a-entity position="5 7 -3" rotation="8 56 7"gltf-model="#metro" animation="property: position ;from: 5 7 -3; to: 7 7 -3; loop: true; dur : 10000 easing : linear"></a-entity>
         <a-entity position="0 -5 -2" rotation="60 5 78"gltf-model="#metro" animation="property: position ;from: 0 -5 -2; to: 2 -4 0; loop: true; dur : 10000 easing : linear"></a-entity>
-        <a-entity position="-5 -8 -11" rotation="120 56 8"gltf-model="#metro" animation="property: position ;from: -5 -8 -11; to: -3 -7 -8; loop: true; dur : 10000 easing : linear"></a-entity>
+        <a-entity position="-5 -5 -11" rotation="120 56 8"gltf-model="#metro" animation="property: position ;from: -5 -8 -11; to: -3 -8   -13; loop: true; dur : 10000 easing : linear"></a-entity>
 
         <a-entity position="-2 0.5 -4" scale="0.004 0.004 0.004" obj-model="obj: #metro2obj; mtl: #metro2mtl" rotation="-100 -20 -3" animation="property: position ;from: -2 0.5 -4; to: -1 0.5 -3; loop: true; dur : 10000 easing : linear"
          animation="property: rotation ;from: -100 -20 -3; to: -102 -21 -5; loop: true; dur : 10000 easing : linear"></a-entity>
         <a-entity position="3 -6 7" scale="0.004 0.004 0.004" obj-model="obj: #metro2obj; mtl: #metro2mtl" rotation="-100 40 -3" animation="property: position ;from: 3 -6 7; to: 4 -6 7; loop: true; dur : 10000 easing : linear"> </a-entity>
+
+        <a-entity position="0 -2 0" rotation="10 -10 30"gltf-model="#cloudr" scale="2 2 2" ></a-entity>
 
         <!-- DEBUT ETUDIANT -->
         <a-sky id="image-360" radius="500" change-sky radius="10" src="#sky3"></a-sky>
