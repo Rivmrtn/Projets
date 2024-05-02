@@ -178,7 +178,9 @@
             <a-asset-item id="metro" src="./assets/95c5d6515ff04092987d698ab2c8442a.glb"></a-asset-item>
             <a-asset-item id="metro2obj" src="./assets/Subway_Car_v2_L2.123cb9dd5a3b-c41a-4e15-891d-94b47c8fa676/13918_Subway_Car_v1_L2.obj"></a-asset-item>
             <a-asset-item id="metro2mtl" src="./assets/Subway_Car_v2_L2.123cb9dd5a3b-c41a-4e15-891d-94b47c8fa676/13918_Subway_Car_v1_L2.mtl"></a-asset-item>
-            <a-asset-item id="cloudr" src="./assets/cloud_ring2.glb"></a-asset-item>
+            <!-- <a-asset-item id="cloudr" src="./assets/cloud_ring2.glb"></a-asset-item> -->
+            <a-asset-item id="rail1" src="./assets/rails (1).glb"></a-asset-item>
+            <a-asset-item id="rail2" src="./assets/rails.glb"></a-asset-item>
             
             <img id="sky3" src="./assets/table_mountain_2_puresky_4k.jpg">
         </a-assets>
@@ -191,11 +193,19 @@
         <a-entity position="0 -5 -2" rotation="60 5 78"gltf-model="#metro" animation="property: position ;from: 0 -5 -2; to: 2 -4 0; loop: true; dur : 10000 easing : linear"></a-entity>
         <a-entity position="-5 -5 -11" rotation="120 56 8"gltf-model="#metro" animation="property: position ;from: -5 -8 -11; to: -3 -8   -13; loop: true; dur : 10000 easing : linear"></a-entity>
 
+        <a-entity position="-6 -2 -0.2" rotation="45 29 -10"gltf-model="#rail1" scale="0.5 0.5 0.5" animation="property: position ;from: -6 -2 -0.2; to: -9 -1.90 -3.2; loop: true; dur : 10000 easing : linear" ></a-entity>
+        <a-entity position="5 -10 -1.5" rotation="20.6 -50 -36"gltf-model="#rail1" scale="0.5 0.5 0.5" animation="property: rotation ;from: 20.6 -50 -36; to: 15.6 -45 -38; loop: true; dur : 10000 easing : linear" ></a-entity>
+        <a-entity position="5.7 9 3" rotation="-25 -100-38"gltf-model="#rail1" scale="0.5 0.5 0.5"animation="property: position ;from: 5.7 9 3; to: 5.7 8 3 ; loop: true; dur : 10000 easing : linear " ></a-entity>
+
+        <a-entity position="0.4 7 -12" rotation="-8 150 -50"gltf-model="#rail2" scale="8 8 8" animation="property: position ;from: 0.4 7 -12; to: -2.4 5 -14 ; loop: true; dur : 10000 easing : linear "></a-entity>
+
         <a-entity position="-2 0.5 -4" scale="0.004 0.004 0.004" obj-model="obj: #metro2obj; mtl: #metro2mtl" rotation="-100 -20 -3" animation="property: position ;from: -2 0.5 -4; to: -1 0.5 -3; loop: true; dur : 10000 easing : linear"
          animation="property: rotation ;from: -100 -20 -3; to: -102 -21 -5; loop: true; dur : 10000 easing : linear"></a-entity>
         <a-entity position="3 -6 7" scale="0.004 0.004 0.004" obj-model="obj: #metro2obj; mtl: #metro2mtl" rotation="-100 40 -3" animation="property: position ;from: 3 -6 7; to: 4 -6 7; loop: true; dur : 10000 easing : linear"> </a-entity>
+        <a-entity position="0 0 0" scale="0.004 0.004 0.004" obj-model="obj: #metro2obj; mtl: #metro2mtl" rotation="-125 -172 -50" animation="property: position ;from: -4 15 -3; to: -6 18 -5; loop: true; dur : 10000 easing : linear"> </a-entity>
+        <a-entity position="0 0 0" scale="0.004 0.004 0.004" obj-model="obj: #metro2obj; mtl: #metro2mtl" rotation="-173 -365 -212" animation="property: position ;from: 0.4 3 7; to: -2.4 5 5; loop: true; dur : 10000 easing : linear"> </a-entity>
 
-        <a-entity position="0 -2 0" rotation="10 -10 30"gltf-model="#cloudr" scale="2 2 2" ></a-entity>
+        <!-- <a-entity position="0 -2 0" rotation="10 -10 30"gltf-model="#cloudr" scale="2 2 2" ></a-entity> -->
 
         <!-- DEBUT ETUDIANT -->
         <a-sky id="image-360" radius="500" change-sky radius="10" src="#sky3"></a-sky>
@@ -207,7 +217,7 @@
         <a-entity id="player" position="0 0 0" fly="scalaire: 0.1 0.1 0.1; trace: true">
             <a-entity id="cam" camera position="0 0 0" 
                 currentposition="trace:false" 
-                look-controls wasd-controls="acceleration:10">
+                look-controls wasd-controls="acceleration:15">
                 <a-entity id="lefthand" position="0 0.5 0" handposition="trace: false" oculus-touch-controls="hand: left" ></a-entity>
                 <a-entity id="righthand" position="0 0.5 0" handposition="trace: false" oculus-touch-controls="hand: right" droite></a-entity>
                 <a-text id="txtlog" value="" align="center" color="#FF0000" 
