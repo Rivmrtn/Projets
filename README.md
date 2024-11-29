@@ -10,4 +10,4 @@
 
 * [I Am Flying](./iamflying/iamflying_full_edit.html)
 
-* [skybox](./skybox.html)
+* [skybox](./skybox/skybox.html)
